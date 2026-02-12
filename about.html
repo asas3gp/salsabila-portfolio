@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Student Portfolio: Education & Learning</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-slate-100 min-h-screen">
+
+<div class="relative flex h-auto min-h-screen w-full flex-col">
+
+<!-- ================= NAVIGATION ================= -->
+<header class="sticky top-0 z-50 w-full border-b border-slate-200 dark:border-slate-800 bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+
+  <div class="mx-auto max-w-[1280px] px-6 lg:px-10 flex h-16 items-center justify-between relative">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="size-8 text-primary">
+        <svg fill="none" viewBox="0 0 48 48">
+          <path fill="currentColor"
+            d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"></path>
+        </svg>
+      </div>
+      <span class="text-lg font-bold tracking-tight text-slate-900 dark:text-white">
+        Salsabila Armand Dita
+      </span>
+    </div>
+
+    <!-- Desktop Menu -->
+    <nav class="hidden md:flex flex-1 justify-end items-center gap-8 px-8">
+      <a href="index.html"
+        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+        Home
+      </a>
+      <a href="projects.html"
+        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+        Projects
+      </a>
+      <a href="about.html"
+        class="text-sm font-bold text-primary border-b-2 border-primary">
+        About
+      </a>
+      <a href="contact.html"
+        class="text-sm font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+        Contact
+      </a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-4">
+
+      <!-- Desktop Button -->
+      <button
+        class="hidden md:flex min-w-[120px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all shadow-lg shadow-primary/20">
+        Download CV
+      </button>
+
+      <!-- Hamburger -->
+      <button class="md:hidden text-3xl" onclick="toggleMenu()">
+        ☰
+      </button>
+
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+    class="hidden md:hidden flex flex-col items-center gap-6 py-6 bg-background-light dark:bg-background-dark border-t border-slate-200 dark:border-slate-800 shadow-lg">
+
+    <a href="index.html"
+      class="text-base font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+      Home
+    </a>
+    <a href="projects.html"
+      class="text-base font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+      Projects
+    </a>
+    <a href="about.html"
+      class="text-base font-bold text-primary">
+      About
+    </a>
+    <a href="contact.html"
+      class="text-base font-medium text-slate-600 dark:text-slate-300 hover:text-primary transition-colors">
+      Contact
+    </a>
+
+    <button
+      class="mt-4 flex w-40 items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold hover:bg-primary/90 transition-all">
+      Download CV
+    </button>
+
+  </div>
+
+</header>
+
+      <!-- Main Content -->
+      <main class="px-4 lg:px-40 flex flex-1 justify-center py-12">
+        <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+          <!-- Page Heading -->
+          <div class="flex flex-wrap justify-between gap-3 p-4 mb-8">
+            <div class="flex min-w-72 flex-col gap-3">
+              <p class="text-slate-900 dark:text-white text-5xl font-black leading-tight tracking-[-0.033em]">
+                Education &amp; Lifelong Learning
+              </p>
+              <p class="text-slate-600 dark:text-slate-400 text-lg font-normal leading-normal max-w-2xl">
+                Bridging academic foundations with practical, project-based learning.
+                Continuously developing technical, design, and collaboration skills through formal education and
+                self-directed study.
+              </p>
+            </div>
+          </div>
+
+          <!-- Timeline Section -->
+          <div class="grid grid-cols-[40px_1fr] gap-x-6 px-4">
+
+            <!-- CURRENT STATUS -->
+            <div class="flex flex-col items-center gap-1">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-primary text-white shadow-xl shadow-primary/30">
+                <span class="material-symbols-outlined !text-[24px]">school</span>
+              </div>
+              <div class="w-[2px] bg-gradient-to-b from-primary to-slate-200 dark:to-slate-800 h-full grow"></div>
+            </div>
+
+            <div class="flex flex-1 flex-col pb-12">
+              <div class="p-1 @container">
+                <div
+                  class="flex flex-col items-stretch justify-start rounded-xl @xl:flex-row @xl:items-start shadow-xl bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 overflow-hidden">
+                  <div
+                    class="w-full @xl:w-48 bg-slate-200 dark:bg-slate-700 aspect-square bg-center bg-no-repeat bg-cover"
+                    data-alt="Universitas Gunadarma" style="background-image: url('image/about.png')"></div>
+
+                  <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-6 px-6">
+                    <div class="flex items-center gap-2 mb-1">
+                      <span
+                        class="inline-flex items-center rounded-full bg-primary/10 px-2.5 py-0.5 text-xs font-bold text-primary border border-primary/20">IN
+                        PROGRESS</span>
+                      <span
+                        class="text-slate-500 dark:text-slate-400 text-xs font-medium uppercase tracking-wider">Academic
+                        Year 2023 — Present</span>
+                    </div>
+
+                    <p class="text-slate-900 dark:text-white text-2xl font-bold leading-tight tracking-[-0.015em]">
+                      Bachelor of Science in Informatics
+                    </p>
+
+                    <div class="flex flex-col md:flex-row md:items-end gap-3 justify-between mt-2">
+                      <div class="flex flex-col gap-1">
+                        <p class="text-slate-700 dark:text-slate-300 text-lg font-semibold">
+                          Technical University of Excellence
+                        </p>
+                        <p class="text-slate-600 dark:text-slate-400 text-base font-normal leading-relaxed max-w-lg">
+                          Undergraduate student in Informatics with a strong interest in front-end development,
+                          UI/UX design, and collaborative software projects.
+                          <span class="block mt-1 font-bold text-primary">Current GPA: 3.5 / 4.0</span>
+                        </p>
+                      </div>
+
+                      <a href="https://www.gunadarma.ac.id"
+                        class="flex min-w-[140px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary/10 hover:bg-primary/20 text-primary text-sm font-bold transition-all border-primary/20">
+                        <span class="truncate">Institution Profile</span>
+                      </a>
+
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RELEVANT COURSEWORK -->
+            <div class="flex flex-col items-center gap-1">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                <span class="material-symbols-outlined !text-[24px]">book</span>
+              </div>
+              <div class="w-[2px] bg-slate-200 dark:bg-slate-800 h-full grow"></div>
+            </div>
+            <div class="flex flex-1 flex-col pb-12">
+              <h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-6 pt-1">
+                Academic Core Competencies</h3>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- Course 1 -->
+                <div
+                  class="bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 p-4 rounded-xl flex items-start gap-4">
+                  <div class="bg-primary/10 text-primary p-2 rounded-lg">
+                    <span class="material-symbols-outlined">code</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Web Programming</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Applied HTML, CSS, and JavaScript, including page structure, styling, and basic interactivity.</p>
+                  </div>
+                </div>
+                <!-- Course 2 -->
+                <div
+                  class="bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 p-4 rounded-xl flex items-start gap-4">
+                  <div class="bg-primary/10 text-primary p-2 rounded-lg">
+                    <span class="material-symbols-outlined">database</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Database System</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Relevant for understanding data structure, data flow, and how web applications manage and retrieve information.</p>
+                  </div>
+                </div>
+                <!-- Course 3 -->
+                <div
+                  class="bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 p-4 rounded-xl flex items-start gap-4">
+                  <div class="bg-primary/10 text-primary p-2 rounded-lg">
+                    <span class="material-symbols-outlined">brush</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Human–Computer Interaction (HCI)</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Strong foundation for UI/UX design, usability, and user-centered thinking.</p>
+                  </div>
+                </div>
+                <!-- Course 4 -->
+                <div
+                  class="bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 p-4 rounded-xl flex items-start gap-4">
+                  <div class="bg-primary/10 text-primary p-2 rounded-lg">
+                    <span class="material-symbols-outlined">terminal</span>
+                  </div>
+                  <div>
+                    <p class="font-bold text-slate-900 dark:text-white">Algorithms &amp; Complexity</p>
+                    <p class="text-sm text-slate-600 dark:text-slate-400">Builds logical thinking and problem-solving skills applied when structuring features, handling data, and writing efficient JavaScript logic.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- CERTIFICATIONS -->
+            <div class="flex flex-col items-center gap-1">
+              <div
+                class="flex items-center justify-center w-10 h-10 rounded-full bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-slate-700">
+                <span class="material-symbols-outlined !text-[24px]">verified</span>
+              </div>
+            </div>
+            <div class="flex flex-1 flex-col py-1">
+              <h3 class="text-slate-900 dark:text-white text-xl font-bold leading-tight tracking-[-0.015em] mb-4">
+                Continuous Learning &amp; Certs</h3>
+              <div class="space-y-3">
+                <div
+                  class="flex items-center justify-between p-4 bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 rounded-xl group hover:border-primary/50 transition-colors">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-12 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+                      <span class="material-symbols-outlined text-slate-500">terminal</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-slate-900 dark:text-white">Responsive Web Design Certification</p>
+                      <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">freeCodeCamp • 2023</p>
+                    </div>
+                  </div>
+                  <a class="text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+                    <span class="material-symbols-outlined">open_in_new</span>
+                  </a>
+                </div>
+                <div
+                  class="flex items-center justify-between p-4 bg-white dark:bg-[#1c1f27] border border-slate-100 dark:border-slate-800 rounded-xl group hover:border-primary/50 transition-colors">
+                  <div class="flex items-center gap-4">
+                    <div
+                      class="w-12 h-12 rounded bg-slate-100 dark:bg-slate-800 flex items-center justify-center overflow-hidden">
+                      <span class="material-symbols-outlined text-slate-500">analytics</span>
+                    </div>
+                    <div>
+                      <p class="font-bold text-slate-900 dark:text-white">Python for Data Science</p>
+                      <p class="text-sm text-slate-500 dark:text-slate-400 font-medium">Coursera (IBM Specialization) •
+                        2023</p>
+                    </div>
+                  </div>
+                  <a class="text-primary opacity-0 group-hover:opacity-100 transition-opacity" href="#">
+                    <span class="material-symbols-outlined">open_in_new</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer Section / Call to Action -->
+          <div class="mt-20 p-8 rounded-2xl bg-gradient-to-br from-primary to-blue-700 text-white text-center">
+            <h3 class="text-2xl font-bold mb-4">
+              Always Learning, Always Growing
+            </h3>
+            <p class="text-white/80 max-w-lg mx-auto mb-8">
+              While my professional career is still in its early stages, I am highly motivated to learn, adapt,
+              and contribute through real-world projects and internship opportunities. I am eager to grow as a developer
+              and designer by applying academic knowledge in practical,
+              collaborative environments.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+
+              <a href="projects.html"
+                class="bg-white text-primary px-8 py-3 rounded-lg font-bold hover:bg-slate-50 transition-colors">
+                View My Project
+              </a>
+
+              <a href="contact.html"
+                class="bg-primary/20 backdrop-blur-sm border border-white/30 text-white px-8 py-3  rounded-lg font-bold hover:bg-primary/30 transition-colors">
+                Contact Me
+              </a>
+
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Footer Small -->
+      <footer class="px-4 lg:px-40 py-8 border-t border-slate-200 dark:border-slate-800 text-center">
+        <p class="text-slate-500 dark:text-slate-400 text-sm">
+          © 2026 Salsabila Arman Dita • Student Portfolio • Built with passion and code.
+        </p>
+      </footer>
+    </div>
+  </div>
+
+  <script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+</script>
+
+</body>
+
+</html>

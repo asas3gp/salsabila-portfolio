@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html class="dark" lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <title>Student Portfolio | Home</title>
+
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Noto+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+    rel="stylesheet" />
+
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#135bec",
+            "background-light": "#f6f6f8",
+            "background-dark": "#101622",
+          },
+          fontFamily: {
+            display: ["Space Grotesk", "sans-serif"],
+            sans: ["Noto Sans", "sans-serif"],
+          },
+          borderRadius: {
+            DEFAULT: "0.25rem",
+            lg: "0.5rem",
+            xl: "0.75rem",
+            full: "9999px",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { font-family: "Noto Sans", sans-serif; }
+    h1,h2,h3,h4,button,.font-display { font-family: "Space Grotesk", sans-serif; }
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+  </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-[#111318] dark:text-white transition-colors duration-300">
+<div class="relative flex min-h-screen flex-col">
+
+<!-- NAVIGATION -->
+<header class="sticky top-0 z-50 w-full border-b border-[#f0f2f4] dark:border-gray-800 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md">
+
+  <div class="mx-auto max-w-[1280px] px-6 lg:px-10 flex h-16 items-center justify-between relative">
+
+    <!-- Logo -->
+    <div class="flex items-center gap-3">
+      <div class="text-primary">
+        <svg class="size-8" fill="none" viewBox="0 0 48 48">
+          <path
+            d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352Z"
+            fill="currentColor"></path>
+        </svg>
+      </div>
+      <span class="text-lg font-bold tracking-tight">Salsabila Arman Dita</span>
+    </div>
+
+    <!-- Desktop Nav -->
+    <nav class="hidden md:flex flex-1 justify-end items-center gap-8 px-8">
+      <a class="text-sm font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+      <a class="text-sm font-medium hover:text-primary transition-colors" href="projects.html">Projects</a>
+      <a class="text-sm font-medium hover:text-primary transition-colors" href="about.html">About</a>
+      <a class="text-sm font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+    </nav>
+
+    <!-- Right Section -->
+    <div class="flex items-center gap-4">
+
+      <!-- Hire Me (desktop only) -->
+      <a href="contact.html"
+        class="hidden md:flex min-w-[100px] items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90">
+        Hire Me
+      </a>
+
+      <!-- Hamburger Button -->
+      <button class="md:hidden text-3xl" onclick="toggleMenu()">
+        ☰
+      </button>
+
+    </div>
+
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobileMenu"
+    class="hidden md:hidden flex flex-col items-center gap-6 py-6 bg-white dark:bg-background-dark border-t border-gray-200 dark:border-gray-800 shadow-lg">
+
+    <a class="text-base font-medium hover:text-primary transition-colors" href="index.html">Home</a>
+    <a class="text-base font-medium hover:text-primary transition-colors" href="projects.html">Projects</a>
+    <a class="text-base font-medium hover:text-primary transition-colors" href="about.html">About</a>
+    <a class="text-base font-medium hover:text-primary transition-colors" href="contact.html">Contact</a>
+
+    <a href="contact.html"
+      class="flex w-40 items-center justify-center rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold transition-all hover:bg-primary/90">
+      Hire Me
+    </a>
+
+  </div>
+
+</header>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col items-center">
+      <div class="w-full max-w-[1280px] px-6 lg:px-10 py-16 lg:py-24">
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+          <!-- Text Content -->
+          <div class="flex-1 flex flex-col gap-8 order-2 lg:order-1">
+            <div class="flex flex-col gap-4">
+              <h1
+                class="text-[#111318] dark:text-white text-5xl lg:text-7xl font-black leading-[1.1] tracking-[-0.03em]">
+                Hi, I am <span class="text-primary">Salsabila</span>, an
+                Informatics Student
+              </h1>
+              <p class="text-[#616f89] dark:text-gray-400 text-lg lg:text-xl font-normal leading-relaxed max-w-[600px]">
+                I am an Informatics student at Universitas Gunadarma with a strong interest in web development and
+                digital technology.
+                I have experience working on academic projects using HTML, CSS, JavaScript, and Python, and I enjoy
+                collaborating in teams to build functional and user-friendly solutions.
+              </p>
+            </div>
+
+            <div class="flex flex-col gap-3">
+              <h3 class="text-[#111318] dark:text-gray-200 text-sm font-bold uppercase tracking-wider">
+                Focus Areas
+              </h3>
+              <div class="flex flex-wrap gap-3">
+                <div
+                  class="flex h-9 items-center justify-center gap-2 rounded-lg bg-primary/10 border border-primary/20 px-4">
+                  <span class="material-symbols-outlined text-primary text-sm">code</span>
+                  <p class="text-primary text-sm font-semibold">
+                    Web Development
+                  </p>
+                </div>
+                <div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-[#f0f2f4] dark:bg-gray-800 px-4">
+                  <span class="material-symbols-outlined text-gray-500 text-sm">account_tree</span>
+                  <p class="text-[#111318] dark:text-white text-sm font-medium">
+                    Data Structures
+                  </p>
+                </div>
+                <div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-[#f0f2f4] dark:bg-gray-800 px-4">
+                  <span class="material-symbols-outlined text-gray-500 text-sm">function</span>
+                  <p class="text-[#111318] dark:text-white text-sm font-medium">
+                    Algorithms
+                  </p>
+                </div>
+                <div class="flex h-9 items-center justify-center gap-2 rounded-lg bg-[#f0f2f4] dark:bg-gray-800 px-4">
+                  <span class="material-symbols-outlined text-gray-500 text-sm">palette</span>
+                  <p class="text-[#111318] dark:text-white text-sm font-medium">
+                    UI Design
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-wrap gap-4 pt-4">
+              <a href="projects.html"
+                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-primary text-white text-base font-bold transition-all hover:scale-[1.02] shadow-lg shadow-primary/20">
+                See my small wins
+              </a>
+
+              <button
+                class="flex min-w-[160px] cursor-pointer items-center justify-center rounded-xl h-14 px-6 bg-white dark:bg-gray-800 border-2 border-[#f0f2f4] dark:border-gray-700 text-[#111318] dark:text-white text-base font-bold transition-all hover:bg-gray-50 dark:hover:bg-gray-700">
+                Connect on LinkedIn
+              </button>
+            </div>
+          </div>
+
+          <!-- Visual Side -->
+          <div class="flex-1 w-full order-1 lg:order-2">
+            <div class="relative w-full aspect-square max-w-[500px] mx-auto">
+              <div class="absolute -top-4 -right-4 w-2/3 h-2/3 bg-primary/10 rounded-full blur-3xl"></div>
+              <div class="absolute -bottom-8 -left-8 w-1/2 h-1/2 bg-blue-400/10 rounded-full blur-3xl"></div>
+
+              <div
+                class="relative h-full w-full rounded-3xl overflow-hidden border-8 border-white dark:border-gray-800 shadow-2xl bg-gray-100 dark:bg-gray-900">
+                <div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-transparent"></div>
+                <img alt="Informatics student working on laptop" class="h-full w-full object-cover scale-150" style="object-position: 50% 60%;"
+                  src="image/foto.png" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="mt-auto border-t border-solid border-[#f0f2f4] dark:border-gray-800 py-12">
+      <div class="mx-auto max-w-[1280px] px-6 lg:px-10">
+        <div class="flex flex-col items-center gap-8 md:flex-row md:justify-between">
+          <div class="flex flex-col gap-2 text-center md:text-left">
+            <p class="text-sm font-bold text-primary tracking-widest uppercase">
+              Salsabila Arman Dita
+            </p>
+            <p class="text-[#616f89] text-sm">
+              © 2026. Built with passion and informatics.
+            </p>
+          </div>
+
+          <div class="flex items-center gap-8">
+            <a class="text-[#616f89] hover:text-primary text-sm font-medium transition-colors" href="#">Privacy
+              Policy</a>
+            <a class="text-[#616f89] hover:text-primary text-sm font-medium transition-colors" href="#">Terms</a>
+          </div>
+
+          <div class="flex gap-5">
+            <a class="w-10 h-10 flex items-center justify-center rounded-full bg-[#f0f2f4] dark:bg-gray-800 text-[#616f89] hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined">share</span>
+            </a>
+            <a class="w-10 h-10 flex items-center justify-center rounded-full bg-[#f0f2f4] dark:bg-gray-800 text-[#616f89] hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined">terminal</span>
+            </a>
+            <a class="w-10 h-10 flex items-center justify-center rounded-full bg-[#f0f2f4] dark:bg-gray-800 text-[#616f89] hover:bg-primary hover:text-white transition-all"
+              href="#">
+              <span class="material-symbols-outlined">alternate_email</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("hidden");
+  }
+</script>
+
+</body>
+
+</html>
